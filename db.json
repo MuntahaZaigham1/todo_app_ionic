@@ -3,7 +3,7 @@
   "version": 1,
   "encrypted": false,
   "mode": "full",
-  "tables": [
+  "tables":
     {
       "name": "vendors",
       "schema": [
@@ -34,5 +34,4 @@
         [4, "Practical Ionic Book", 79, 1]
       ]
     }
-  ]
 }
