@@ -23,20 +23,15 @@
       "schema": [
         { "column": "id", "value": "INTEGER PRIMARY KEY NOT NULL" },
         { "column": "name", "value": "TEXT NOT NULL" },
-        { "column": "currency", "value": "TEXT" },
-        { "column": "value", "value": "INTEGER" },
-        { "column": "vendorid", "value": "INTEGER" },
-        { "column": "last_modified", "value": "INTEGER DEFAULT (strftime('%s', 'now'))" },
-        {
-          "foreignkey": "vendorid",
-          "value": "REFERENCES vendors(id)"
-        }
+        { "column": "price", "value": "INTEGER" },
+        { "column": "quantity", "value": "INTEGER" },
+       
       ],
       "values": [
-        [1, "Devdactic Fan Hat", "EUR", 9, 1, 1604396241],
-        [2, "Ionic Academy Membership", "USD", 25, 2, 1604296241],
-        [3, "Ionic Sticker Swag", "USD", 4, 3, 1594196241],
-        [4, "Practical Ionic Book", "USD", 79, 1, 1603396241]
+        [1, "Devdactic Fan Hat", 9, 1],
+        [2, "Ionic Academy Membership", 25, 2],
+        [3, "Ionic Sticker Swag", 4, 3],
+        [4, "Practical Ionic Book", 79, 1]
       ]
     }
   ]
