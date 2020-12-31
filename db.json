@@ -3,7 +3,7 @@
   "version": 1,
   "encrypted": false,
   "mode": "full",
-  "tables": [
+  "tables": 
     {
       "name": "products",
       "schema": [
@@ -20,5 +20,5 @@
         [4, "Practical Ionic Book", 79, 1]
       ]
     }
-  ]
+  
 }
