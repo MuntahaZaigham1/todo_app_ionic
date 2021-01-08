@@ -1,0 +1,41 @@
+ 
+      <div class="ion-page" >
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-toggle>
+                <ion-button>
+                  <ion-icon slot="icon-only" name="menu"></ion-icon>
+                </ion-button>
+              </ion-menu-toggle>
+            </ion-buttons>
+            <ion-title>Edit A Product</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+            <form [formGroup]="editForm">
+                <ion-item>
+                    <ion-label>Product ID: </ion-label>
+                    <ion-input type="number" required class="form-control" [(ngModel)]="product.id" formControlName="id" id="id"  placeholder="ID" disabled></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Updated Product Name: </ion-label>
+                    <ion-input type="text" required class="form-control" [(ngModel)]="product.name" formControlName="name" id="name"  placeholder="Name"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Updated Product Quantity: </ion-label>
+                    <ion-input type="number" required class="form-control" [(ngModel)]="product.quantity" formControlName="quantity" id="Quantity" name="Quantity" placeholder="Quantity"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Updated Product Price: </ion-label>
+                    <ion-input type="number" required class="form-control" [(ngModel)]="product.price" formControlName="price" id="Price" name="Price" placeholder="Price"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <button ion-button (click)="updateP(editForm.value)"> Update</button>
+                </ion-item>
+            </form>  
+        </ion-content>
+      </div>
+   
+
+

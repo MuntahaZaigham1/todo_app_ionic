@@ -1,3 +1,37 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-split-pane when="sm" contentId="main">
+    <ion-menu contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content id="main">
+        <ion-list>
+          <ion-list-header>
+            Navigate
+          </ion-list-header>
+          <ion-menu-toggle [autoHide]="false">
+            
+              <ion-button expand="block" href="\home">
+              <ion-icon slot="start" name='home'></ion-icon>
+              <ion-label>
+                Home
+              </ion-label>
+            </ion-button>
+            
+
+            <ion-button expand="block" href="\add">
+              <ion-icon slot="start" name='Add'></ion-icon>
+              <ion-label >
+                Add a Product in the list
+              </ion-label>
+            </ion-button>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+  </ion-split-pane>
 </ion-app>

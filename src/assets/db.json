@@ -1,0 +1,23 @@
+{
+    "database": "product-db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables":
+      {
+        "name": "products",
+        "schema": [
+          { "column": "id", "value": "INTEGER PRIMARY KEY NOT NULL" },
+          { "column": "name", "value": "TEXT NOT NULL" },
+          { "column": "price", "value": "INTEGER" },
+          { "column": "quantity", "value": "INTEGER" }
+         
+        ],
+        "values": [
+          [1, "Devdactic Fan Hat", 9, 1],
+          [2, "Ionic Academy Membership", 25, 2],
+          [3, "Ionic Sticker Swag", 4, 3],
+          [4, "Practical Ionic Book", 79, 1]
+        ]
+      }
+  }

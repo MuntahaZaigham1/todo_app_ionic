@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AddTodoComponent } from './add-todo/add-todo.component';
+import { EditTodoComponent } from './edit-todo/edit-todo.component';
+
 
 const routes: Routes = [
   {
@@ -11,6 +14,12 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  { path: 'add', component: AddTodoComponent },
+  { path: 'edit/:id', component: EditTodoComponent }
+  
+
+  
+  
 ];
 
 @NgModule({

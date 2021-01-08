@@ -1,0 +1,40 @@
+   
+      <div class="ion-page" >
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-menu-toggle>
+                <ion-button>
+                  <ion-icon slot="icon-only" name="menu"></ion-icon>
+                </ion-button>
+              </ion-menu-toggle>
+            </ion-buttons>
+            <ion-title>Add A Product</ion-title>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                <ion-item>
+                    <ion-label>Product ID: </ion-label>
+                    <ion-input type="number" required class="form-control" formControlName="id" id="id"  placeholder="ID"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Product Name: </ion-label>
+                    <ion-input type="text" required class="form-control" formControlName="name" id="name"  placeholder="Name"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Product Quantity: </ion-label>
+                    <ion-input type="number" required class="form-control" formControlName="quantity" id="Quantity" name="Quantity" placeholder="Quantity"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Product Price: </ion-label>
+                    <ion-input type="number" required class="form-control" formControlName="price" id="Price" name="Price" placeholder="Price"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <button ion-button type="submit">Add</button>
+                </ion-item>
+            </form>  
+        </ion-content>
+      </div>
+   
+

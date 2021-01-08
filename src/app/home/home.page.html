@@ -1,20 +1,86 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="ion-page">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-toggle>
+              <ion-button>
+                <ion-icon slot="icon-only" name="menu"></ion-icon>
+              </ion-button>
+            </ion-menu-toggle>
+          </ion-buttons>
+          <ion-title>List of Products: </ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-grid>
+          <ion-row class="ion-align-items-start">
+            <ion-col size="12" size-sm>
+              <div>
+                PID
+              </div>
+            </ion-col>
+            <ion-col size="12" size-sm>
+              <div>
+                Name
+              </div>
+            </ion-col>
+            <ion-col size="12" size-sm>
+              <div>
+                Quantity
+              </div>
+            </ion-col>
+            <ion-col size="12" size-sm>
+              <div>
+                Price
+              </div>
+            </ion-col>
+            <ion-col size="12" size-sm>
+              <div>
+                
+              </div>
+            </ion-col>
+            <ion-col size="12" size-sm>
+              <div>
+                
+              </div>
+            </ion-col>
+          </ion-row>
+          <div *ngFor="let product of products" >
+            <ion-row class="ion-align-items-start">
+              <ion-col size="12" size-sm>
+                <div>
+                  {{product.id}}
+                </div>
+              </ion-col>
+              <ion-col size="12" size-sm>
+                <div>
+                  {{product.name}}
+                </div>
+              </ion-col>
+              <ion-col size="12" size-sm>
+                <div>
+                  {{product.quantity}}
+                </div>
+              </ion-col>
+              <ion-col size="12" size-sm>
+                <div>
+                  {{product.price}}
+                </div>
+              </ion-col>
+              <ion-col size="12" size-sm>
+                <div>
+                  <ion-button routerLink="/edit/{{product.id}}">Edit</ion-button>
+                </div>
+              </ion-col>
+              <ion-col size="12" size-sm>
+                <div>
+                  <ion-button (click)="Delete(product)">Delete</ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-grid>
+      </ion-content>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
