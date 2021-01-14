@@ -13,7 +13,7 @@
           </ion-toolbar>
         </ion-header>
         <ion-content class="ion-padding">
-            <form [formGroup]="editForm">
+            <form [formGroup]="editForm" (ngSubmit)="onSubmit(editForm.value)">
                 <ion-item>
                     <ion-label>Product ID: </ion-label>
                     <ion-input type="number" required class="form-control" [(ngModel)]="product.id" formControlName="id" id="id"  placeholder="ID" disabled></ion-input>
@@ -31,7 +31,7 @@
                     <ion-input type="number" required class="form-control" [(ngModel)]="product.price" formControlName="price" id="Price" name="Price" placeholder="Price"></ion-input>
                 </ion-item>
                 <ion-item>
-                    <button ion-button (click)="updateP(editForm.value)"> Update</button>
+                    <button ion-button type="submit"> Update</button>
                 </ion-item>
             </form>  
         </ion-content>

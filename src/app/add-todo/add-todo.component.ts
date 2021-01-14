@@ -32,7 +32,7 @@ export class AddTodoComponent implements OnInit {
     }
 
   ngOnInit(): void {
-    
+    this.databaseService.init();
   }
   
   
@@ -49,11 +49,15 @@ export class AddTodoComponent implements OnInit {
     this.pro['name']=this.f.name.value;
     this.pro['quantity']=this.f.quantity.value;
     this.pro['price']=this.f.price.value;
-    this.databaseService.addProduct(this.pro);
-        
-          alert('Your product has been submitted');
-          this.router.navigate(['/home']);
-        
+    this.databaseService.addProduct(this.pro).subscribe(res=>{
+      const temp=res;
+      if(temp>=1){
+        alert('Your product has been submitted');
+        this.router.navigate(['/home']);
+      }
+     
+    });
+           
       
     console.warn('Your order has been submitted', this.pro.name);
 

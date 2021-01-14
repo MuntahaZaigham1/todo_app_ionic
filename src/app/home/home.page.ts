@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { LoadingController, Platform } from '@ionic/angular';
 import { Product } from './product';
 import { DatabaseService } from './services/database.service';
+import { FcmService } from './services/fcm.service';
 import { ProductProviderService } from './services/product-provider.service';
 
 @Component({
@@ -12,13 +13,17 @@ import { ProductProviderService } from './services/product-provider.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  filterTerm: string;
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
     private productProvider: ProductProviderService,
     private databaseService: DatabaseService,
-    private loadingCtrl: LoadingController
+    private loadingCtrl: LoadingController,
+    private fcmService: FcmService
+
     
   ) {
     this.initializeApp();
@@ -33,6 +38,8 @@ export class HomePage {
         console.log("db isReady:",isReady);
         if (isReady) {
           loading.dismiss();
+          this.fcmService.initPush();
+
           this.statusBar.styleDefault();
           this.splashScreen.hide();
         }
@@ -63,11 +70,7 @@ export class HomePage {
       console.log('outside delete');
 
     }
-  getProducts(): void {
-    this.productProvider.getProducts()
-    .subscribe(products => this.products = products);
-    
-  }
+  
   temp:any;
   loadProducts() {
     this.databaseService.getProductList().subscribe(res => {
