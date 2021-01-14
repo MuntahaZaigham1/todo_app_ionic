@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "225094421097",
+    "project_id": "todo-dcf1e",
+    "storage_bucket": "todo-dcf1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225094421097:android:0cfffb13662736dd95b0f8",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225094421097-86ost6rub31s67rlecfc747b41vl7747.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUsvaZCPB4qbna-ke9TtUIWZ4YA2i3qEI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225094421097-86ost6rub31s67rlecfc747b41vl7747.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
